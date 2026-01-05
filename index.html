@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TimeArena UX/UI</title>
+  <link rel="icon" type="image/png" sizes="96x96" href="icon-x96.png">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+  <div class="app">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-left">
+        <div class="avatar">🧒</div>
+        <div>
+          <div class="hello" id="dailyGreeting">Salut, Nikita! 👋</div>
+          <div class="subhello" id="dailyMessage">Bun venit în arenă. Azi facem progres! ⚔️</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <button class="pill" id="toggleThemeBtn" title="Schimbă tema">🌙</button>
+      </div>
+    </header>
+
+    <!-- STATUS BAR -->
+    <section class="statusbar">
+      <div class="stat">
+        <div class="stat-label">Max/zi ⏱️</div>
+        <div class="stat-value" id="statMax">120</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Câștigate ✅</div>
+        <div class="stat-value" id="statEarned">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">XP ⭐</div>
+        <div class="stat-value" id="statXp">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Level 🆙</div>
+        <div class="stat-value" id="statLevel">1</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Streak 🔥</div>
+        <div class="stat-value" id="statStreak">0</div>
+      </div>
+    </section>
+
+    <!-- ACTIVE PENALTY STRIP -->
+    <section class="penalty-strip hidden" id="penaltyStrip">
+      <div class="penalty-strip-left">
+        <div class="badge danger">⚠️ BAN ACTIV</div>
+        <div class="penalty-strip-title" id="penaltyTitle">Daily Ban 🔴</div>
+        <div class="penalty-strip-sub" id="penaltyCountdown">Reactivare în: 00:00:00</div>
+      </div>
+      <div class="penalty-strip-right">
+        <button class="btn ghost" id="openPenaltiesBtn">Vezi ⚠️</button>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="main" id="viewRoot"></main>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottomnav">
+      <button class="navbtn active" data-view="dashboard" title="Panou">🏠<span>Panou</span></button>
+      <button class="navbtn" data-view="missions" title="Misiuni">🎯<span>Misiuni</span></button>
+      <button class="navbtn" data-view="shop" title="Magazin">🛒<span>Magazin</span></button>
+      <button class="navbtn" data-view="penalties" title="Penalități">⚠️<span>Penalități</span></button>
+      <button class="navbtn" data-view="rules" title="Reguli">📜<span>Reguli</span></button>
+      <button class="navbtn" data-view="history" title="Istoric">📊<span>Istoric</span></button>
+    </nav>
+
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
